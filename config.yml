@@ -1,0 +1,8 @@
+#If you touch this your config might light on fire
+version: 0.1
+
+#Should switching worlds act the same as quiting when combat logging?
+#Also do you want to disable worlds so they can freely switch to specific worlds?
+worlds:
+  enabled: true
+  disabledworlds: []

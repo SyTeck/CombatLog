@@ -13,6 +13,9 @@ import com.syteck.combatlog.events.EventManager;
 
 public class CombatLog extends JavaPlugin {
 	
+	public CommandManager commandManager;
+	public EventManager eventManager;
+
 	public static CombatLog i;
 	public static void log(Level level, String message) {
 		
@@ -20,9 +23,6 @@ public class CombatLog extends JavaPlugin {
 		
 	}
 	
-	public CommandManager commandManager;
-	public EventManager eventManager;
-
 	@Override
 	public void onDisable() {
 

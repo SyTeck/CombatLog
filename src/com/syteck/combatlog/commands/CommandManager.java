@@ -2,10 +2,11 @@ package com.syteck.combatlog.commands;
 
 import java.util.HashMap;
 
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import com.syteck.combatlog.MessageManager;
 
 public class CommandManager {
 
@@ -34,7 +35,7 @@ public class CommandManager {
 
 				} else {
 
-					player.sendMessage(ChatColor.RED + "You do not have permission to do this.");
+					player.sendMessage(MessageManager.get("action.nopermission"));
 
 				}
 
@@ -42,7 +43,7 @@ public class CommandManager {
 
 				if(c.isPlayerOnly()) {
 
-					sender.sendMessage("This command can only be executed by players.");
+					sender.sendMessage(MessageManager.get("action.playeronly"));
 
 				} else {
 

@@ -16,11 +16,12 @@ public class MessageManager {
 			config.load();
 			
 			YamlConfiguration y = config.getYaml();
-			y.set("", "");
-			y.set("", "");
-			y.set("", "");
-			y.set("", "");
-			y.set("", "");
+			y.set("action.nopermission", "&cYou do not have permission for this command.");
+			y.set("action.playeronly", "This command can only be used by players.");
+			
+			y.set("command.reload", "&eYou successfully reloaded the config.");
+			y.set("command.timeleft", "&eYou have &a%time%&e seconds left.");
+			y.set("command.outofcombat", "&eYou are currently not in combat.");
 			y.set("", "");
 			y.set("", "");
 			y.set("", "");
