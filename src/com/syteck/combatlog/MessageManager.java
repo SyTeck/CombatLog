@@ -39,6 +39,8 @@ public class MessageManager {
 			
 			y.set("combat.ontag", "&cYou are now tagged as in combat.");
 			y.set("combat.outofcombat", "&eYou are now out of combat.");
+			y.set("combat.teleport", "&cYou are not allow to teleport in combat.");
+			y.set("combat.command", "&cYou are not allow to use that command in combat.");
 			
 			config.save();	
 		}

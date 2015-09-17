@@ -7,6 +7,8 @@ commands:
   combatlog:
     description: Plugin related commands.
     usage: /combatlog
+    aliases: cl
   timeleft:
     description: Check how many seconds of combat you have left.
     usage: /timeleft
+    aliases: [tag, ct]
