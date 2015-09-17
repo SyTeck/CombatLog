@@ -13,8 +13,9 @@ public class CommandManager {
 	public HashMap<String, ICommand> commandMap = new HashMap<String, ICommand>();
 
 	public CommandManager() {
-
-
+		
+		commandMap.put("combatlog", new CommandCombatlog());
+		commandMap.put("timeleft", new CommandTimeleft());
 
 	}
 

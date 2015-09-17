@@ -1,0 +1,12 @@
+name: CombatLog
+version: 0.1
+
+main: com.syteck.combatlog.CombatLog
+
+commands:
+  combatlog:
+    description: Plugin related commands.
+    usage: /combatlog
+  timeleft:
+    description: Check how many seconds of combat you have left.
+    usage: /timeleft

@@ -1,6 +1,18 @@
 #If you touch this your config might light on fire
 version: 0.1
 
+#Should the plugin itself be active?
+#How long do you want players to be in combat for?
+#Do you want to disable the plugins for specific worlds?
+combatlog:
+  enabled: true
+  time: 20
+  disabledworlds: []
+  
+punishment:
+  kill: true
+  broadcast: true
+
 #Should switching worlds act the same as quiting when combat logging?
 #Also do you want to disable worlds so they can freely switch to specific worlds?
 worlds:

@@ -19,14 +19,14 @@ public class CombatLog extends JavaPlugin {
 	public static CombatLog i;
 	public static void log(Level level, String message) {
 		
-		Bukkit.getLogger().log(level, message);
+		Bukkit.getLogger().log(level, "[CombatLog] " + message);
 		
 	}
 	
 	@Override
 	public void onDisable() {
-
-
+		
+		UserManager.clear();
 
 		super.onDisable();
 	}
@@ -40,7 +40,7 @@ public class CombatLog extends JavaPlugin {
 		
 		commandManager = new CommandManager();
 		eventManager = new EventManager();
-
+		
 		Bukkit.getPluginManager().registerEvents(eventManager, this);
 		
 		super.onEnable();

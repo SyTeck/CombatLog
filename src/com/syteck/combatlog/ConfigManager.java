@@ -13,21 +13,6 @@ public class ConfigManager {
 		
 	}
 	
-	public static void reload() {
-		
-		if(c == null) return;
-		
-		try {
-			
-			c.getYaml().load(c.getFile());
-			
-		} catch (Exception e) {
-			
-			e.printStackTrace();
-			
-		}
-	}
-	
 	public static void setup(Config config) {
 
 		if(!config.getFile().exists()) {
