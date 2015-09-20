@@ -24,8 +24,8 @@ public class ConfigManager {
 
 		if(config.getYaml().getDouble("version") != VERSION) {
 
-			CombatLog.log(Level.INFO, "The config is outdated and is being updated.");
-			CombatLog.log(Level.WARNING, "The config might need reconfiguring after update.");
+			CombatLog.log(Level.INFO, "The config is being updated.");
+			CombatLog.log(Level.WARNING, "The config needs reconfiguring after update.");
 
 			if(config.getFile().delete()) {
 

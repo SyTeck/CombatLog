@@ -32,6 +32,7 @@ public class User {
 		timer = null;
 		
 		if(message) CombatLog.i.getServer().getPlayer(id).sendMessage(MessageManager.get("combat.outofcombat"));
+		UserManager.remove(id);
 	}
 	
 	public boolean hasCombatTimer() {

@@ -21,12 +21,12 @@ public class CommandCombatlog implements ICommand {
 			
 			if(sender instanceof Player) {
 				
-				sender.sendMessage(ChatColor.YELLOW + "You are running version " + ChatColor.GREEN + ConfigManager.VERSION + ChatColor.YELLOW + " of CombatLog.");
+				sender.sendMessage(ChatColor.YELLOW + "You are running version " + ChatColor.GREEN + CombatLog.VERSION + ChatColor.YELLOW + " of CombatLog.");
 				sender.sendMessage(ChatColor.YELLOW + "Type " + ChatColor.GREEN + "'/combatlog reload'" + ChatColor.YELLOW + " to reload config.");
 				
 			} else {
 				
-				sender.sendMessage("You are running version " + ConfigManager.VERSION + " of CombatLog.");
+				sender.sendMessage("You are running version " + CombatLog.VERSION + " of CombatLog.");
 				sender.sendMessage("Type '/combatlog reload' to reload config.");
 				
 			}

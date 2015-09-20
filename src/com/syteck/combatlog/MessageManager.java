@@ -3,6 +3,7 @@ package com.syteck.combatlog;
 import java.util.HashMap;
 import java.util.logging.Level;
 
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 public class MessageManager {
@@ -18,8 +19,8 @@ public class MessageManager {
 			
 			if(config.getYaml().get("version") != null && config.getYaml().getDouble("version") != VERSION) {
 				
-				CombatLog.log(Level.INFO, "The message config is outdated and is being updated.");
-				CombatLog.log(Level.WARNING, "The messages might need reconfiguring after update.");
+				CombatLog.log(Level.INFO, "The message config is being updated.");
+				CombatLog.log(Level.WARNING, "The messages needs reconfiguring after update.");
 				
 				config.getFile().delete();
 				config.load();
@@ -54,7 +55,7 @@ public class MessageManager {
 	
 	public static String get(String key) {
 		
-		return messageMap.get(key).replace("&", "§");
+		return ChatColor.translateAlternateColorCodes('&', messageMap.get(key));
 		
 	}
 }

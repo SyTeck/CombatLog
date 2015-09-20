@@ -14,7 +14,13 @@ public class UserManager {
 	}
 	public static User get(UUID id) {
 		
+		if(exists(id)) add(id);
+		
 		return userMap.get(id);
+	}
+	public static boolean exists(UUID id) {
+		
+		return userMap.containsKey(id);
 		
 	}
 	public static void remove(UUID id) {

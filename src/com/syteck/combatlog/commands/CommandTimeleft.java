@@ -15,7 +15,6 @@ public class CommandTimeleft implements ICommand {
 	public void execute(CommandSender sender, Command command, String[] args) {
 
 		Player player = (Player) sender;
-		User user = UserManager.get(player.getUniqueId());
 
 		if(player.isOp() || player.hasPermission("combatlog.bypass")) {
 
@@ -23,8 +22,9 @@ public class CommandTimeleft implements ICommand {
 
 		} else {
 
-			if(user.hasCombatTimer()) {
+			if(UserManager.exists(player.getUniqueId()) && UserManager.get(player.getUniqueId()).hasCombatTimer()) {
 
+				User user = UserManager.get(player.getUniqueId());
 				player.sendMessage(MessageManager.get("command.timeleft").replace("%time%", "" + user.getCombatTimer().getTimeleft()));
 
 			} else {

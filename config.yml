@@ -13,6 +13,7 @@ combatlog:
 #Do you want to disallow certain commands?
 disallow:
   teleporting: true
+  enderpearls: false
   commands: []
 
 #Do you want to kill the player when they combat log?
